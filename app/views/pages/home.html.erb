@@ -1,0 +1,11 @@
+<div class="container mt-5">
+<h1> ChatGPT AI Powered Response</h1>
+    <%= render partial: "ai/request_form", locals: {uuid: @uuid}%>
+
+    <%= turbo_stream_from "channel_#{@uuid}" %>
+
+    <h2> Response </h2>
+    <div id="ai_output">
+        <%= render partial: "ai/output", locals: {generated_idea: ""} %>
+    </div>
+</div>

@@ -13,10 +13,12 @@
   <body>
   <main>
     <div class="row">
-      <div class="col-md-2 background">
+      <div class="col-md-2 bg-dark">
         <%= render "shared/header" %>
       </div>
       <%= yield %>
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
     </div>
     </main>
   </body>

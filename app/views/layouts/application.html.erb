@@ -11,6 +11,13 @@
   </head>
 
   <body>
-    <%= yield %>
+  <main>
+    <div class="row">
+      <div class="col-md-2 background">
+        <%= render "shared/header" %>
+      </div>
+      <%= yield %>
+    </div>
+    </main>
   </body>
 </html>

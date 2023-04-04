@@ -1,11 +1,29 @@
 <div class="container mt-5">
-<h1> ChatGPT AI Powered Response</h1>
-    <%= render partial: "ai/request_form", locals: {uuid: @uuid}%>
+    <h1> ChatGPT AI Powered Response</h1>
+    <br>
+    <div class="row">
 
-    <%= turbo_stream_from "channel_#{@uuid}" %>
+        <div class="col">
+            <%= render partial: "ai/request_form", locals: {uuid: @uuid}%>
 
-    <h2> Response </h2>
-    <div id="ai_output">
-        <%= render partial: "ai/output", locals: {generated_idea: ""} %>
+            <%= turbo_stream_from "channel_#{@uuid}" %>
+
+            <h2> Response </h2>
+                
+            <div class="col" id="ai_output">
+                <%= render partial: "ai/output", locals: {generated_idea: ""} %>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

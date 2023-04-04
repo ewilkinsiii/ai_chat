@@ -1,18 +1,18 @@
 <%= form_for :ai_request, url:  ai_request_path, method: :post, remote: true do |f| %>
     <%= f.hidden_field :uuid, value: @uuid %>
     <div class="form-group">
-        <%= f.label :prompt %>
+        <%= f.label :prompt %>:
         <%= f.text_area :prompt, class:"form-control" %>
     </div>
     
     <div class="form-group">
-        <%= f.label :type %>
+        <%= f.label :type %>:
         <%= f.select :ai_model, options_for_select([
             ["Ada $0.0016 / 1K token", "ada"],
             ["Babbage $0.0024 / 1K tokens", "babbage"],
             ["Curie $0.0120 / 1K tokens", "curie"],
             ["Davinci $0.1200 / 1K tokens", "davinci"]
-        ], "davinci"), {}, class:"form-control" %>
+        ], "davinci"), {}, class:"form-select" %>
     </div>
     <br>
 
